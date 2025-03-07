@@ -1,0 +1,327 @@
+//Write a function to add integer values of an array
+
+
+arr = [10,20,30,40]
+sum = 0
+for i in range(0,len(arr)):
+    sum = sum + arr[i]
+print("Sum of all integer values in array: ",sum) 
+
+
+//Write a function to calculate the average value of an array of integers
+
+
+def average_of_array(arr):
+    return sum(arr) / len(arr) if len(arr) > 0 else 0  
+numbers = [10, 20, 30, 40, 50]  
+result = average_of_array(numbers)
+print("Average of array elements:", result)
+
+
+//Write a program to find the index of an array element
+
+arr = [10, 20, 30, 40, 50]
+element = 40
+idx = -1
+
+for i in range(len(arr)):
+    if arr[i] == element:
+        idx = i
+        break
+
+print(idx)
+
+
+//Write a function to test if array contains a specific value
+
+
+
+a = [10, 20, 30, 40, 50]
+key = 30
+flag = False
+for val in a:
+    if val == key:
+        flag = True
+        break
+if flag:
+    print("Element exists in the list")
+else:
+    print("Element does not exist")
+
+
+//rite a function to remove a specific element from an array
+
+
+
+numbers = [10, 20, 30, 40, 50]  
+numbers.remove(30) 
+print("Array after removal:", numbers)
+
+
+//Write a function to copy an array to another array
+
+
+def copy_array(original):
+    return original[:] 
+numbers = [10, 20, 30, 40, 50]  
+copied_numbers = copy_array(numbers)
+print("Original array:", numbers)
+print("Copied array:", copied_numbers)
+
+
+
+//Write a function to insert an element at a specific position in the array
+
+
+score = [43,45,99,76]
+score.insert(2, 45)
+print(score)
+
+
+
+//Write a function to find the minimum and maximum value of an array
+
+
+def getMin(arr, n):
+    if(n==1):
+        return arr[0]
+    else:
+        return min(getMin(arr[1:], n-1), arr[0])
+def getMax(arr, n): 
+    if(n==1):
+        return arr[0]
+    else:
+        return max(getMax(arr[1:], n-1), arr[0])
+arr = [12, 1234, 45, 67, 1]
+n = len(arr)
+print("Minimum element of array: ", 
+                   getMin(arr, n));
+print("Maximum element of array: ",
+                   getMax(arr, n));
+
+
+//Write a function to reverse an array of integer values
+
+
+a = [1, 2, 3, 4, 5]
+a.reverse()
+print(a)
+
+
+
+//Write a function to find the duplicate values of an array
+
+
+a = [1, 2, 3, 1, 2, 4, 5, 6, 5]
+s = set()
+dup = []
+for n in a:
+    if n in s:
+        dup.append(n)
+    else:
+        s.add(n)
+print(dup)
+
+
+//Write a program to find the common values between two arrays
+
+
+def find_common_elements(arr1, arr2):
+    return list(set(arr1) & set(arr2)) 
+array1 = [10, 20, 30, 40, 50]
+array2 = [30, 40, 50, 60, 70]
+
+common_values = find_common_elements(array1, array2)
+print("Common values:", common_values)
+
+
+
+//Write a method to remove duplicate elements from an array
+
+
+numbers = [10, 20, 30, 20, 40, 50, 30, 50]  
+unique_numbers = list(set(numbers)) 
+print("Array after removing duplicates:", unique_numbers)
+
+//Write a method to find the second largest number in an array
+
+
+
+numbers = [10, 20, 30, 40, 50, 50, 30]  
+unique_numbers = list(set(numbers)) 
+unique_numbers.sort()  
+print("Second largest number:", unique_numbers[-2] if len(unique_numbers) > 1 else "No second largest number")
+
+
+
+//Write a method to find number of even number and odd numbers in an array
+
+
+
+arr = [1, 7, 8, 4, 5, 16, 8]
+n = len(arr)
+countEven = 0
+countodd = 0
+for i in range(0, n):
+    if arr[i]&1==0 :
+        countEven += 1
+    else:
+        countodd += 1
+
+print("Even Elements count : " )
+print(countEven)
+
+print("Odd Elements count : ")
+print(countodd)
+
+
+
+//Write a function to get the difference of largest and smallest value
+
+
+
+def difference_max_min(arr):
+    return max(arr) - min(arr) if arr else "Array is empty"
+numbers = [10, 20, 30, 40, 50]  
+result = difference_max_min(numbers)
+
+print("Difference between largest and smallest value:", result)
+
+
+
+//Write a method to verify if the array contains two specified elements(12,23)
+
+
+def contains_elements(arr):
+    return 12 in arr and 23 in arr  
+numbers = [10, 12, 23, 30, 40]  
+result = contains_elements(numbers)
+
+print("Contains 12 and 23:", result)
+
+
+
+//Write a program to remove the duplicate elements and return the new array
+
+
+def remove_duplicates(arr):
+    return list(set(arr)) 
+numbers = [10, 20, 30, 20, 40, 50, 30, 50]  
+unique_numbers = remove_duplicates(numbers)
+print("New array after removing duplicates:", unique_numbers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

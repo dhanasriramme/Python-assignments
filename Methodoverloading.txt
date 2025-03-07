@@ -1,0 +1,42 @@
+//1.Write two methods with the same name but different number of parameters of same type and call the methods
+
+
+class MethodOverloading:
+    def add(self, a, b=None):
+        if b is None:
+            print(f"Single parameter method called, result: {a}")
+        else:
+            print(f"Two parameter method called, result: {a + b}")
+if __name__ == "__main__":
+    obj = MethodOverloading()
+    obj.add(10)     
+    obj.add(10, 20)  
+
+
+//2.Write two methods with the same name but different number of parameters of different data type and call the methods
+
+
+class MethodOverloading:
+    def display(self, value):
+        if isinstance(value, int):
+            print(f"Method called with integer: {value}")
+        elif isinstance(value, str):
+            print(f"Method called with string: {value}")
+        else:
+            print("Method called with unsupported data type")
+if __name__ == "__main__":
+    obj = MethodOverloading()
+    obj.display(10)    
+    obj.display("Hello") 
+
+
+//3.Write two methods with the same name and same number of parameters of same type
+
+
+class MethodOverloading:
+    def display(self, value1, value2):
+        print(f"Method called with two parameters: {value1}, {value2}")
+if __name__ == "__main__":
+    obj = MethodOverloading()
+    obj.display(10, 20)   
+    obj.display("Hi", "There") 

@@ -1,0 +1,149 @@
+//2. Concatenating two strings using + operator
+
+
+str1 = "Hello, "
+str2 = "World!"
+result = str1 + str2
+print(result) 
+
+
+//3.Finding the length of the string
+
+
+str1 = "Hello, Python!"
+length = len(str1)
+print(length)
+
+//4.Extract a string using Substring
+
+
+str1 = "Hello, Python!"
+substring = str1[7:12]
+print(substring) 
+
+
+//5.Searching in strings using index() using python
+
+
+text = "Hello, welcome to Python programming!"
+position = text.index("Python")
+print(position)
+
+
+//6.Matching a String Against a Regular Expression With matches()
+
+
+import re
+pattern = r"Hello"
+text = "Hello, World!"
+match = re.match(pattern, text)
+if match:
+    print("Match found!")
+else:
+    print("No match found.")
+
+//7.Comparing strings
+
+
+s1 = "apple"
+s2 = "banana"
+print(s1 == s2)
+print(s1 != s2)
+print(s1 < s2)
+
+
+//8.startsWith(), endsWith() and compareTo()
+
+
+text = "Hello, Python!"
+print(text.startswith("Hello")) 
+print(text.startswith("Python"))
+print(text.endswith("!"))  
+print(text.endswith("Python")) 
+
+
+//9.Trimming strings with strip()
+
+
+txt = "     banana     "
+x = txt.strip()
+print("of all fruits", x, "is my favorite")
+
+
+
+//10.Replacing characters in strings with replace()
+
+
+txt = "one one was a race horse, two two was one too."
+x = txt.replace("one", "three")
+print(x)
+
+
+//11.Splitting strings with split()
+
+
+txt = "welcome to the jungle"
+x = txt.split()
+print(x)
+
+
+//12.Converting integer objects to Strings
+
+n = 56
+s = str(n)
+print(s)
+
+
+//13.Converting to uppercase and lowercase
+
+
+//Upper Case
+s = "learn python with gfg!"
+res = s.upper()
+print(res) 
+// Lower case:
+s = "Learn Python with gfg!"
+res = s.lower()
+print(res) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

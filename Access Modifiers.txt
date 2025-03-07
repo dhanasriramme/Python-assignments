@@ -1,0 +1,100 @@
+
+//1.Create a class with PRIVATE fields, private method and a main method. Print the fields in main method. Call the private method in main method.
+Create a sub class and try to access the private fields and methods from sub class.
+
+
+
+
+class Parent:
+    def __init__(self):
+        self.__private_field = "I am Private"
+
+    def __private_method(self):
+        return "This is a Private Method"
+
+    def get_private_field(self):
+        return self.__private_field
+
+    def call_private_method(self):
+        return self.__private_method()
+
+
+class Child(Parent):
+    def try_access_private_field(self):
+        try:
+            return self.__private_field  # This will fail
+        except AttributeError:
+            return "Cannot access private field"
+
+    def try_call_private_method(self):
+        try:
+            return self.__private_method()  # This will fail
+        except AttributeError:
+            return "Cannot call private method"
+
+
+if __name__ == "__main__":
+    parent = Parent()
+    print(parent.get_private_field())  
+    print(parent.call_private_method())  
+
+    child = Child()
+    print(child.try_access_private_field())  
+    print(child.try_call_private_method())  
+    print(child._Parent__private_field)  
+    print(child._Parent__private_method())  
+
+
+
+//2.Create a class with PUBLIC fields and methods.
+Access the public methods and fields from any class in the same package or different package.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

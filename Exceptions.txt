@@ -1,0 +1,290 @@
+//1.Write a program to generate Arithmetic Exception without exception handling
+
+n = 10
+try:
+    res = n / 0
+except ZeroDivisionError:
+    print("Can't be divided by zero!")
+
+//2.Handle the Arithmetic exception using try-catch block
+
+n = 10
+try:
+    res = n / 0
+except ZeroDivisionError:
+    print("Can't be divided by zero!")
+
+//3.Write a method which throws exception, Call that method in main class without try block
+
+def risky_method():
+    raise Exception("This is an intentional exception!")
+risky_method()  
+
+
+//4.Write a program with multiple catch blocks
+
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    
+    result = num1 / num2 
+    my_list = [1, 2, 3]
+    print(my_list[5])  
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except ValueError:
+    print("Error: Invalid input. Please enter numeric values.")
+except IndexError:
+    print("Error: List index out of range.")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+print("Program continues after exception handling.")
+
+
+//5.Write a program to throw exception with your own message
+
+age = int(input("Enter your age: "))
+
+if age < 18:
+    raise ValueError("Age must be 18 or above to proceed.")
+
+print("Access granted.")
+
+
+
+//6.Write a program to create your own exception
+
+
+class UnderAgeError(Exception):
+    pass
+def validate_age(age):
+    if age < 18:
+        raise UnderAgeError("Age must be 18 or above to proceed.")
+    print("Access granted.")
+try:
+    age = int(input("Enter your age: "))
+    validate_age(age)
+except UnderAgeError as e:
+    print(f"Error: {e}")
+except ValueError:
+    print("Error: Please enter a valid number.")
+
+
+//7.Write a program with finally block
+
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    result = num1 / num2 
+    print(f"Result: {result}")
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Invalid input. Please enter numeric values.")
+finally:
+    print("Execution completed. Cleaning up resources (if any).")
+
+
+
+//8.Write a program to generate Arithmetic Exception
+
+
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    result = num1 / num2 
+    print(f"Result: {result}")
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+
+//9.Write a program to generate FileNotFoundException
+
+
+try:
+    file = open("non_existent_file.txt", "r")
+    content = file.read()
+    print(content)
+    file.close()
+except FileNotFoundError:
+    print("Error: The file was not found.")
+
+
+//10.Write a program to generate ClassNotFoundException
+
+
+
+try:
+    class_name = "NonExistentClass"
+    cls = globals()[class_name] 
+    obj = cls()  
+except KeyError:
+    print(f"Error: Class '{class_name}' not found.")
+
+
+//11.Write a program to generate IOException
+
+
+try:
+    with open("non_existent_file.txt", "r") as file:
+        content = file.read()
+        print(content)
+except OSError as e:  
+    print(f"Error: {e}")
+
+
+//12.Write a program to generate NoSuchFieldException
+
+class Person:
+    def __init__(self, name):
+        self.name = name  
+p = Person("John")
+try:
+    print(p.age) 
+except AttributeError:
+    print("Error: The requested field does not exist in the object.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+//Write a program to print your name.
+print("Sai Sowmya")
+
+//Write a program for a Single line comment and multi-line comments
+Single line comments
+# I am single line comment
+print("Single line comment")
+
+Multi line comments
+
+""" Multi-line comment used
+print("Python Comments") """
+
+
+//Define variables for different Data Types int, Boolean, char, float, double and print on the Console.
+a = 5
+print(type(a))
+b = 5.0
+print(type(b))
+c = 2 + 4j
+print(type(c))
+String = 'Hello'
+print(type(String))
+
+
+//Define the local and Global variables with the same name and print both variables and understand the scope of the variables
+
+Global Scope
+
+x = 300
+def myfunc():
+  print(x)
+myfunc()
+print(x)
+
+
+Local Scope
+
+def myfunc():
+  x = 300
+  def myinnerfunc():
+    print(x)
+  myinnerfunc()
+myfunc()
+
+

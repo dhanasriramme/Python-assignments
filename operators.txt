@@ -1,0 +1,126 @@
+//Write a function for arithmetic operators(+,-,*,/)
+
+
+val1 = 2
+val2 = 3
+res = val1 + val2
+print(res)
+res = val1 - val2
+print(res)
+res = val1 * val2
+print(res)
+res = val1 / val2
+print(res)
+
+
+//Write a method for increment and decrement operators(++, --)
+
+
+var1 = 5
+var2 = 5
+print(var1)
+var1 += 1
+var2 += 1
+print(var2)
+
+
+//Write a program to find the two numbers equal or not.
+
+
+num1 = int(input("Input the values for Number1: "))
+num2 = int(input("Input the values for Number2: "))
+if num1 == num2:
+    print("Number1 and Number2 are equal")
+else:
+    print("Number1 and Number2 are not equal")
+
+
+//Program for relational operators (<,<==, >, >==)
+
+
+a = 4
+b = 10
+
+if a > b:
+    print("a is greater than b")
+else:
+    print("a is less than or equal to b")
+
+if a >= b:
+    print("a is greater than or equal to b")
+else:
+    print("a is lesser than b")
+
+if a < b:
+    print("a is less than b")
+else:
+    print("a is greater than or equal to b")
+
+if a <= b:
+    print("a is lesser than or equal to b")
+else:
+    print("a is greater than b")
+
+
+//Print the smaller and larger number
+
+
+
+p, q, r, s = map(int, input("Enter any four numbers: ").split())
+minno = min(p, q, r, s)
+maxno = max(p, q, r, s)
+print("Largest number from the given 4 numbers is:", maxno)
+print("Smallest number from the given 4 numbers is:", minno)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

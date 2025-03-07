@@ -1,0 +1,149 @@
+//1.Create an abstract class with abstract and non-abstract methods.
+
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    """Abstract class representing an animal."""
+    
+    @abstractmethod
+    def make_sound(self):
+        """Abstract method to be implemented by subclasses."""
+        pass
+    
+    def sleep(self):
+        """Concrete method that can be used by all subclasses."""
+        print("This animal is sleeping.")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof! Woof!")
+dog = Dog()
+dog.make_sound() 
+dog.sleep()      
+
+
+//2.Create a sub class for an abstract class. Create an object in the child class for the
+abstract class and access the non-abstract methods
+
+
+
+from abc import ABC, abstractmethod
+class Parent(ABC):
+    
+    def non_abstract_method(self):
+        return "This is a non-abstract method from the Parent class."
+    
+    @abstractmethod
+    def abstract_method(self):
+        pass
+
+class Child(Parent):
+    
+    def abstract_method(self):
+        return "Implemented abstract method in Child class."
+
+    def access_parent_methods(self):
+               parent_obj = super()
+        print(parent_obj.non_abstract_method())
+
+ classchild_instance = Child()
+child_instance.access_parent_methods()
+print(child_instance.abstract_method())
+
+
+//3.Create an instance for the child class in child class and call abstract methods
+
+
+
+
+from abc import ABC, abstractmethod
+class Parent(ABC):
+    
+    @abstractmethod
+    def abstract_method(self):
+        pass
+class Child(Parent):
+    
+    def abstract_method(self):
+        return "Abstract method implemented in Child class."
+    
+    def call_abstract_method(self):
+        # Creating an instance of the Child class inside itself
+        child_instance = Child()
+        print(child_instance.abstract_method())
+child = Child()
+child.call_abstract_method()
+
+//4.Create an instance for the child class in child class and call non-abstract methods
+
+
+from abc import ABC, abstractmethod
+class Parent(ABC):
+    
+    def non_abstract_method(self):
+        return "This is a non-abstract method from the Parent class."
+    
+    @abstractmethod
+    def abstract_method(self):
+        pass
+
+class Child(Parent):
+    
+    def abstract_method(self):
+        return "Abstract method implemented in Child class."
+    
+    def call_non_abstract_method(self):
+        child_instance = Child()
+        print(child_instance.non_abstract_method())
+child = Child()
+child.call_non_abstract_method()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

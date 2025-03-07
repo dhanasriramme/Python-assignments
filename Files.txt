@@ -1,0 +1,63 @@
+//1.Write a program to read text file
+
+
+with open("sample.txt", "r") as file:
+    content = file.read()
+print("File Content:\n", content)
+
+
+//2.Write a program to write text to .txt file using InputStream
+
+import sys
+with open("output.txt", "w") as file:
+    print("Enter text to write to the file (Type 'exit' to stop):")
+
+    while True:
+        user_input = sys.stdin.readline().strip()
+        if user_input.lower() == "exit":
+            break
+        file.write(user_input + "\n")
+print("Text has been written to output.txt")
+
+
+//3.Write a program to read a file stream
+
+
+with open("sample.txt", "r") as file_stream:
+    content = file_stream.read()
+print("File Content:\n", content)
+
+
+//4.Write a program to read a file stream supports random access
+
+
+
+with open("sample.txt", "r") as file_stream:
+    print("First 10 characters:", file_stream.read(10))
+    print("Current file position:", file_stream.tell())
+    file_stream.seek(0)
+    print("Pointer reset to:", file_stream.tell())
+    print("First line:", file_stream.readline().strip())
+    file_stream.seek(20)
+    print("Reading from 20th character:", file_stream.read(10))
+    file_stream.seek(0, 2)  # 2 means "move relative to file end"
+    print("Final file position (EOF):", file_stream.tell())
+
+
+//5.Write a program to read a file a just to a particular index using seek()
+
+
+with open("sample.txt", "r") as file:
+    file.seek(10)
+    data = file.read(20) 
+    print("Data from index 10:", data)
+
+//6.Write a program to check whether a file is having read access and write access permissions
+
+
+import os
+file_path = "sample.txt"
+has_read_permission = os.access(file_path, os.R_OK)
+has_write_permission = os.access(file_path, os.W_OK)
+print(f"Read Permission for '{file_path}': {'Yes' if has_read_permission else 'No'}")
+print(f"Write Permission for '{file_path}': {'Yes' if has_write_permission else 'No'}")
